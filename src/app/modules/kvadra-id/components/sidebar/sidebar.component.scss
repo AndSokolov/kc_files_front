@@ -1,0 +1,40 @@
+:host {
+  height: 100%;
+}
+
+.sb-container {
+  width: 398px;
+  height: 100%;
+  padding: 58px 16px 16px;
+  background: #fff;
+}
+
+.sb-item {
+  display: flex;
+  padding: 14px 14px 14px 20px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  height: 52px;
+  background: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover,
+  &.active {
+    background: #f5f5f5;
+  }
+
+  .icon {
+    display: block;
+    width: 24px;
+  }
+
+  .text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Rubik, sans-serif;
+  }
+}

@@ -4,13 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/files',
-    pathMatch: 'full',
+    redirectTo: '/kvadra-id',
+    pathMatch: 'full'
   },
   {
-    path: 'files',
-    loadChildren: () => import('./files/files.module').then(m => m.FilesModule),
-  },
+    path: 'kvadra-id',
+    loadChildren: () => import('./modules/kvadra-id/kvadra-id.module').then(m => m.KvadraIdModule)
+  }
 ];
 
 @NgModule({

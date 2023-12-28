@@ -8,6 +8,9 @@
       "files": [
         "*.ts"
       ],
+      "plugins": [
+        "@stylistic"
+      ],
       "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
@@ -15,28 +18,28 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
-        "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "type": "attribute",
-            "prefix": "app",
-            "style": "camelCase"
-          }
-        ],
-        "@angular-eslint/component-selector": [
-          "error",
-          {
-            "type": "element",
-            "prefix": "app",
-            "style": "kebab-case"
-          }
-        ],
         "semi": "off",
         "@typescript-eslint/semi": ["error"],
+        "@typescript-eslint/no-explicit-any": "off",
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": ["error"],
         "object-curly-spacing": ["error", "always", { "objectsInObjects": false }],
-        "max-len": ["error", { "code": 160 }]
+        "max-len": ["error", { "code": 100 }],
+        "@stylistic/indent": ["error", 2],
+        "@stylistic/comma-style": ["error", "last"],
+        "@stylistic/arrow-spacing": "error",
+        "@stylistic/block-spacing": "error",
+        "@stylistic/brace-style": "error",
+        "@stylistic/comma-dangle": ["error", "never"],
+        "@stylistic/computed-property-spacing": ["error", "never"],
+        "@stylistic/function-call-argument-newline": ["error", "consistent"],
+        // "@stylistic/lines-between-class-members": ["error", "always"],
+        "@stylistic/no-multi-spaces": "error",
+        "@stylistic/no-trailing-spaces": "error",
+        "@stylistic/no-whitespace-before-property": "error",
+        "@stylistic/object-curly-newline": ["error", { "consistent": true }],
+        "@stylistic/space-unary-ops": "error",
+        "@stylistic/semi-spacing": ["error", {"before": false, "after": true}]
       }
     },
     {
@@ -47,7 +50,13 @@
         "plugin:@angular-eslint/template/recommended",
         "plugin:@angular-eslint/template/accessibility"
       ],
-      "rules": {}
+      "rules": {
+        "@angular-eslint/template/interactive-supports-focus": "off",
+        "@angular-eslint/template/click-events-have-key-events": "off",
+        "@angular-eslint/template/no-negated-async": "off",
+        "@angular-eslint/template/label-has-associated-control": "off",
+        "@angular-eslint/template/attributes-order": ["error"]
+      }
     }
   ]
 }
