@@ -4,12 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/kvadra-id',
+    redirectTo: '/center',
     pathMatch: 'full'
   },
   {
-    path: 'kvadra-id',
-    loadChildren: () => import('./modules/kvadra-id/kvadra-id.module').then(m => m.KvadraIdModule)
+    path: 'center',
+    loadChildren: () => import('./modules/center/center.module').then(m => m.CenterModule)
   }
 ];
 

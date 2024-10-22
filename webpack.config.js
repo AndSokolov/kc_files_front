@@ -2,10 +2,10 @@ const { shareAll, withModuleFederationPlugin } = require('@angular-architects/mo
 
 module.exports = withModuleFederationPlugin({
 
-  name: 'kc_kvadraid_front',
+  name: 'kc_center_admin_front',
 
   exposes: {
-    'kc_kvadraid_front': './src/app/modules/kvadra-id/kvadra-id.module.ts',
+    'kc_center_admin_front': './src/app/modules/center/center.module.ts',
   },
 
   shared: {
